@@ -1,0 +1,42 @@
+=========>Env   
+Php ==> BackEnd ===> server
+--- Linux  ==> https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu
+** Lamp  (Linux Apache mySql PHP)
+
+===>  (/var/www/html ===>())
+    sudo apt update 
+    sudo apt install apache2  =========> Local server
+    ---> systemctl status  apache2
+    sudo apt install mysql-server
+    ---> systemctl status  mysql
+    sudo apt install php libapache2-mod-php php-mysql
+    php --version || php -v
+==============================================
+===>  ( cd /var/www/html ===>(mkdir phpCourse ===> touch index.php))
+
+Run ===> 
+127.0.0.1/index.php
+
+** Xamp 
+---https://www.apachefriends.org/download.html
+
+--- windows
+** Xamp   ===> next next (apche , mysql , phpmyadmin)
+** wamp (windows Apache mySql PHP)  ==> https://www.wampserver.com/en/
+** laragon --> https://laragon.org/docs/install   ====> next , next 
+
+
+handle root   ==> setting ==> path of root
+
+
+=========================================>
+fileName.php
+--- html
+--- php --------> 
+
+<?php     
+
+
+code
+
+    ?>
