@@ -1,0 +1,31 @@
+========>  Day 2
+• Array
+• Arrays Types
+• Array Operators
+• Array functions
+• Functions  Types
+• String and String Functions
+• include VS require
+• isSet VS Empty Vs UnSet
+•variable of variable
+ * $$varName=value
+ * $x="test";
+ * $$x=5; 
+ * echo $test,"<br>";
+
+• Null Coalescing Operator 
+ * The Null Coalescing Operator (??) in PHP
+ *   The null coalescing operator (??) in PHP is used to check if a variable exists and is not null. If the variable is set and not null, it returns the variable's value. Otherwise, it returns the provided default value.
+
+*It is a shorthand for using isset() in conditional expressions.
+ */
+
+$y;
+echo($y??"yousef")."<br>";
+
+$first = null;
+$second = null;
+$third = "Hello, World!";
+
+$value = $first ?? $second ?? $third ?? "Default Value";
+echo $value."<br>"; // Output: Hello, World!
