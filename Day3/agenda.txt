@@ -1,0 +1,12 @@
+==========> OOP 
+- what is oop
+- Access Modifires
+- priciples of oop
+-- inheritance  and types of inheritance
+-- Encapsulation 
+-- polymorphism
+-- Abstraction
+-- interface
+- self , this 
+-- static , const
+- Composition

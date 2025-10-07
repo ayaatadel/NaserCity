@@ -1,0 +1,5 @@
+search  with code 
+===========> __get ,__set , __call
+===> statice function ==> if i can override , can be extend or not   
+===> trait ==> (is trait can be extend ?? )
+==> name space 
