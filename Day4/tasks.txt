@@ -1,0 +1,4 @@
+login , register , profile
+===> table ==> products (id , name , image ,description , price )
+--- add product , update , delete  , show all products 
+---> handel sql injection in code 

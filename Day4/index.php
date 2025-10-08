@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 /**
  * form
@@ -27,38 +27,38 @@
 
 
 
-$userName="root";
-$password="";
-// default ==> 3306
-$host="localhost";  //$host="localhost:3307";
-$dbType="mysql";
-$dbName="iti_4m_pen_test_2025";
+// $userName="root";
+// $password="";
+// // default ==> 3306
+// $host="localhost";  //$host="localhost:3307";
+// $dbType="mysql";
+// $dbName="iti_4m_pen_test_2025";
 
-$connection=new PDO("$dbType:host=$host;dbname=$dbName",$userName,$password) ;
-// insert in data
-$query="insert into users (name , email, password) values('mohammed','mohammed@gmail.com','123456')";
-$sqlQuery=$connection->prepare($query);
-// // var_dump($query);
-// // echo "<br>";
-// // var_dump($sqlQuery);
-$sqlQuery->execute();
-// var_dump($connection);
+// $connection=new PDO("$dbType:host=$host;dbname=$dbName",$userName,$password) ;
+// // insert in data
+// $query="insert into users (name , email, password) values('mohammed','mohammed@gmail.com','123456')";
+// $sqlQuery=$connection->prepare($query);
+// // // var_dump($query);
+// // // echo "<br>";
+// // // var_dump($sqlQuery);
+// $sqlQuery->execute();
+// // var_dump($connection);
 
-// select from data 
-$querySelect="SELECT * FROM users"; // string
-$sqlSelect=$connection->prepare($querySelect); // sql 
-$sqlSelect->execute();// bool  (true , false)
-/**
- * fetch ==> one row
- * fetchAll  ==> multi rows
- */
+// // select from data 
+// $querySelect="SELECT * FROM users"; // string
+// $sqlSelect=$connection->prepare($querySelect); // sql 
+// $sqlSelect->execute();// bool  (true , false)
+// /**
+//  * fetch ==> one row
+//  * fetchAll  ==> multi rows
+//  */
 
-$result=$sqlSelect->fetchAll(PDO::FETCH_ASSOC); // 
-// var_dump($result);
-foreach ($result as $value) {
-  var_dump($value);
-  echo "<br>";
-}
+// $result=$sqlSelect->fetchAll(PDO::FETCH_ASSOC); // 
+// // var_dump($result);
+// foreach ($result as $value) {
+//   var_dump($value);
+//   echo "<br>";
+// }
 
 
-?>
+?> -->
