@@ -1,0 +1,12 @@
+========>Data
+CRUDS ==> Create Read Update Delete
+tables ==> user
+
+
+insert into Database  ==> Create
+     // table Name (columns)
+INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES (1, 'penTest', 'pen@gmail.com', '123456');
+
+get data from Database ==> Read
+updata data in Database ==> updata
+delete data from Database ==> Delete
