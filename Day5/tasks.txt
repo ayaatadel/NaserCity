@@ -1,0 +1,8 @@
+===> handel Sql Injection
+
+===> handel method edit in users 
+===> handel all cruds of products 
+
+Bonous ==> class ==> singletone design pattern
+
+

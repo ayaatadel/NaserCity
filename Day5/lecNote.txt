@@ -1,0 +1,12 @@
+=========>Connection with OOP ==> Laravel 
+====> Deal with files
+====> laravel 
+
+
+/**
+show ==> data one user  (id , name ,email )
+function show ($table ,$id)
+{
+    $query= "select * from $table where id=$id ";
+
+}
