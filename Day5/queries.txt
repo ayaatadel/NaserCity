@@ -1,0 +1,123 @@
+
+======================= create tables
+1- create table ==> create table tableName(cols constrains)
+===>create table  department (id int primary key autoincrement , name varchar (200) not null)
+
+===> create table has colmuns (foreign key)=>  departmentlocation
+create table  departmentlocation (department_id int , FOREIGN key (department_id) REFERENCES department (id) )
+
+
+==> create table employee
+CREATE TABLE employee ( id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(200) NOT NULL, address VARCHAR(255), salary INT, BD DATE, department_id INT, supervisor_id INT, gender VARCHAR(10) DEFAULT 'male', FOREIGN KEY (department_id) REFERENCES department(id), FOREIGN KEY (supervisor_id) REFERENCES employee(id) );
+
+
+==> create table project 
+CREATE table project (id int PRIMARY key AUTO_INCREMENT ,name varchar (250) NOT null , location varchar (250) NOT null , department_id int , FOREIGN key (department_id) REFERENCES department(id) )
+===>
+
+Empoyee Dependants
+create table  employeeDependantes(employee_id int , FOREIGN key (employee_id) REFERENCES employee (id), Fname varchar (200), BD date , gender varchar (10)default 'male' )
+=============>
+Empoyee Projects
+create table  employeeProjects(id int PRIMARY key AUTO_INCREMENT,employee_id int, FOREIGN key(employee_id) REFERENCES employee(id), project_id int ,FOREIGN key(project_id) REFERENCES project(id))
+
+============================================= drop table
+
+drop table tableName********** notes ==> you can drop child table then parent table
+
+===================================== ****************************===============
+
+                                         insert data in tables
+
+1- insert data in table -==> INSERT INTO department (id , name) values(1,"nada")
+
+2- insert data in project with relation to department=>
+INSERT INTO project (id , name,location,department_id) values(1,"php","mec",1)
+
+
+================================ *********************** ====================
+                                Dealing with data in tables
+1-select all data in table employee => select * from employee
+1-select sepecific cloumn data in table employee => select name , salary from employee;
+
+============== Alias ==> show column with alias name
+select name as employeeName, salary as employeeSalary from employee;
+
+============  condition => where , in , between 
+1- where => select name as employeeName, salary as employeeSalary from employee WHERE salary>30000;
+
+2- in ==> range
+select name as employeeName, salary as employeeSalary from employee WHERE salary in(30000,50000);
+====> 30000 , 50000
+3- between => range
+select name as employeeName, salary as employeeSalary from employee WHERE salary BETWEEN 30000 and 50000;
+===> 30000,40000,50000
+
+================================> update value in column 
+1- condition => UPDATE employee set address ="helwan" WHERE name ="mohammmed";
+2- with out condition=>update all data in column=> UPDATE employee set address ="helwan" 
+
+==> and , or , not
+UPDATE employee set address ="cairo" WHERE name ="mohammmed" and address="helwan";
+*********** and ==> true and true
+
+UPDATE employee set address ="cairo" WHERE name ="mohammmed" or address="helwan";
+*********** or ==> true and false ==> true
+
+******** not==>SELECT * FROM employee WHERE NOT address='london';
+         true => false , false ==> true
+
+
+=====================> select data in or order 
+SELECT * FROM employee ORDER BY salary DESC;
+
+=========> select data using order and condition ==> -1- condition 2- order BY
+SELECT * FROM employee  WHERE salary BETWEEN 30000 and 40000 ORDER BY name  DESC;
+
+=======> select data using limit of columns==>SELECT * FROM employee LIMIT 2;
+===========> condition : SELECT * FROM employee WHERE salary > 30000 LIMIT 2;
+
+**********************  Aggregiation functions : sum , avg , count , min , max
+SELECT MAX(salary) AS LargestSalary 
+FROM employee ;
+
+SELECT MIN(salary) AS LargestSalary 
+FROM employee ;
+
+SELECT avg(salary) AS LargestSalary FROM employee;
+
+SELECT sum(salary) AS LargestSalary FROM employee;
+
+SELECT count(salary) AS LargestSalary FROM employee;
+
+=====================================================
+like operator ==> SELECT * FROM employee WHERE name LIKE 'k%s%';
+==> start with k and end with s
+
+====================================== delete data from colmuns
+delete from emplyee where id = 1  => id=1
+
+delete from emplyee ==> delete all data 
+
+
+===========================**********************************===================
+                          change or update on structrure of table => (Alter)
+
+== add columns in table  (add colmun hours to employeeProjects)
+alter table employeeprojects add hours int DEFAULT 0
+
+
+== drop column in table (drop testAlter in table employeeProjects)
+ALTER table employeeprojects DROP COLUMN testAlter
+
+
+== add constrains to column in table ==> add uinque to name in table department
+alter table department add CONSTRAINT uniqueName UNIQUE (name) 
+
+==> updete constraint with default values
+ALTER TABLE employee
+MODIFY BD DATETIME DEFAULT CURRENT_TIMESTAMP;
+
+=========== rename table 
+Alter table employeeprojects RENAME to employeeProjects
+
